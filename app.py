@@ -73,14 +73,14 @@ def main():
 			if result:
 				#st.success("Logged In as {}".format(username))
 				
-				pag_name = ["Demo_iniziale","Demo"]
+				pag_name = ["Demo","Demo_iniziale"]
 				
 				OPTIONS = pag_name
 				sim_selection = st.selectbox('Seleziona la pagina', OPTIONS)
 
-				if sim_selection == pag_name[0]:
+				if sim_selection == pag_name[1]:
 					pag1()
-				elif sim_selection == pag_name[1]:
+				elif sim_selection == pag_name[0]:
 					pag2()
 				elif sim_selection == pag_name[2]:
 					pag3()
