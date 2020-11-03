@@ -7,8 +7,6 @@ from pag2 import main as  pag2
 #from pagxx import main as pagxx
 
 
-st.set_option('deprecation.showImageFormat', False)
-
 # Security
 #passlib,hashlib,bcrypt,scrypt
 import hashlib

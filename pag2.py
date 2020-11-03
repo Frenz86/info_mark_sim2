@@ -4,6 +4,8 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 
+showImageFormat = "False"
+
 
 
 def ad_calc_profit(price_item, cost_item,unit_sold):
