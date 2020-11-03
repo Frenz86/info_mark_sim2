@@ -41,7 +41,7 @@ def main():
     # Get the data from url and request it as json file
     st.button("Re-run")
     st.title("Advertising Analytics")
-    image = Image.open('./image/silvi2.jpg')
+    image = Image.open('./image/silvi.jpg')
     st.image(image,use_column_width=True)
 
     #% VENDITE LINEA1

@@ -4,8 +4,6 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 
-
-
 def ad_calc_profit(price_item, cost_item, ad_budget,sales_expense,conversion_rate):
     profit_item = []
     break_even_cnt = 0
@@ -17,9 +15,9 @@ def ad_calc_profit(price_item, cost_item, ad_budget,sales_expense,conversion_rat
         unit_sold = ad_budget*conversion_rate
         # Calculate total profit
         profit = unit_sold * (unit_price - unit_cost) - sales_expense
-        print("------")
-        print(f"unit sold: {unit_sold}")
-        print(unit_price, unit_cost, profit)
+        ##print("------")
+        #print(f"unit sold: {unit_sold}")
+        #print(unit_price, unit_cost, profit)
 
         profit_item.append(profit)
 
@@ -38,8 +36,8 @@ def get_items_ad_triangular(unit_price, unit_cost, N):
 def main():
     # Get the data from url and request it as json file
     st.button("Re-run")
-    #st.title("Welcome pagexx")
-    image = Image.open('./image/silvi2.jpg')
+    #st.title("Welcome pagexx")#
+    image = Image.open('./image/silvi.jpg')
     st.image(image,use_column_width=True)
 
     # # #% VENDITE LINEA1
