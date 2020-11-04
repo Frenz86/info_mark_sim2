@@ -37,7 +37,7 @@ def main():
     # Get the data from url and request it as json file
     st.button("Re-run")
     #st.title("Welcome pagexx")#
-    image = Image.open('./image/silvi.jpg')
+    image = Image.open('./image/Silvi1.jpeg')
     st.image(image,use_column_width=True)
 
     # # #% VENDITE LINEA1

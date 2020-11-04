@@ -63,7 +63,7 @@ def main():
     if var1+var2+var3 ==100:
         st.markdown("La somma delle percentuali è corretta")
     else:
-        st.markdown("I numeri corretti non sono corretti, cambiare le proporzioni!!")
+        st.markdown("le proporzioni inserite non sono corrette, cambiare le proporzioni!!")
     
 
     if var1 !=0:
@@ -140,7 +140,6 @@ def main():
     st.markdown("- VOUCHER CARTACEI")
     st.markdown("- EVENTI")
 
-    
     #% LINEAR OPTIMIZATION ADVERTISING BUDGET
     chan1=st.number_input('% BUDGET ON TV',value=15,max_value=100,step=1) 
     chan1_rate = st.slider(label="Impostare la conversion rate TV",
@@ -148,19 +147,19 @@ def main():
                           min_value=0.00,
                           value=0.12,
                           step=0.01)
-    chan2=st.number_input('% BUDGET E-MAIL MARKETING',value=100-chan1,max_value=100,step=1)
+    chan2=st.number_input('% BUDGET E-MAIL MARKETING',value=50-chan1,max_value=100,step=1)
     chan2_rate = st.slider(label="Impostare la conversion rate E-MAIL MARKETING",
                           max_value=1.00,
                           min_value=0.00,
                           value=0.09,
                           step=0.01)
-    chan3=st.number_input('% BUDGET FACEBOOK-GOOGLE',value=100-chan1-chan2,max_value=100,step=1)
+    chan3=st.number_input('% BUDGET FACEBOOK-GOOGLE',value=70-chan1-chan2,max_value=100,step=1)
     chan3_rate = st.slider(label="Impostare la conversion rate FACEBOOK-GOOGLE",
                           max_value=1.00,
                           min_value=0.00,
                           value=0.12,
                           step=0.01)
-    chan4=st.number_input('% BUDGET VOUCHER CARTACEI',value=100-chan1-chan2-chan3,max_value=100,step=1)
+    chan4=st.number_input('% BUDGET VOUCHER CARTACEI',value=90-chan1-chan2-chan3,max_value=100,step=1)
     chan4_rate = st.slider(label="Impostare la conversion rate VOUCHER CARTACEI",
                           max_value=1.00,
                           min_value=0.00,
@@ -172,6 +171,11 @@ def main():
                           min_value=0.00,
                           value=0.06,
                           step=0.01)
+
+    if chan1+chan2+chan3+chan4+chan5 ==100:
+        st.markdown("La somma delle percentuali è corretta")
+    else:
+        st.markdown("le proporzioni inserite non sono corrette, cambiare le proporzioni!!")
     ## ON TOTAL
     unit_sold_SEO = int(ad_budget*chan1/100*chan1_rate)
     unit_sold_TV  = int(ad_budget*chan2/100*chan2_rate)
@@ -261,7 +265,7 @@ def main():
                 f"**{(profit_item- CTOT) / (CTOT)*100: .2f}%**")
         #st.markdown(f"ROI: **{((sum(profit_item1) / len(profit_item1)+sum(profit_item2)/ len(profit_item2))- ad_budget-sales_expense-marketing_expense) *100 / (ad_budget): .2f}**")
         hist_data = [utile_campagne]
-        group_label = ['Utile campagne marketing']
+        group_label = ['Operative Income campagne marketing']
         fig = ff.create_distplot(hist_data, group_label, bin_size=[3], curve_type='normal')
         st.plotly_chart(fig, use_container_width=True)  
 
