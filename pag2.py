@@ -140,7 +140,7 @@ def main():
     st.markdown("- VOUCHER CARTACEI")
     st.markdown("- EVENTI")
 
-    st.markdown("Il conversion rate è calcolato come il numero di conversioni/costo totale per ogni campagna marketing")
+    st.markdown("La conversion rate è calcolata come il numero di conversioni/costo totale per ogni tipologia di campagna marketing")
     #image = Image.open('./image/conv.jpg')
     #st.image(image,use_column_width=True) 
 
