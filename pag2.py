@@ -141,8 +141,8 @@ def main():
     st.markdown("- EVENTI")
 
     st.markdown("Il conversion rate è calcolato come il numero di conversioni/costo totale per ogni campagna marketing")
-    image = Image.open('./image/conv.jpg')
-    st.image(image,use_column_width=True) 
+    #image = Image.open('./image/conv.jpg')
+    #st.image(image,use_column_width=True) 
 
     #% LINEAR OPTIMIZATION ADVERTISING BUDGET
     chan1=st.number_input('% BUDGET ON TV',value=15,max_value=100,step=1) 
