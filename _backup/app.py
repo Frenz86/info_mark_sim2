@@ -6,17 +6,6 @@ from pag2 import main as  pag2
 # from pag5 import main as pag5
 #from pagxx import main as pagxx
 
-#to monitor logging
-import csv
-from datetime import datetime as dt
-import base64
-import gspread
-
-def get_time():
-    d = dt.now().strftime("%Y-%m-%d-%H:%M:%S")
-    return d
-
-########################
 
 # Security
 #passlib,hashlib,bcrypt,scrypt
@@ -53,9 +42,9 @@ def view_all_users():
 	return data
 
 
-name = 'MARKETING-SIMULATION'
 
 def main():
+	
 	################ load logo from web #########################
 	from PIL import Image
 	import requests
@@ -82,24 +71,8 @@ def main():
 
 			result = login_user(username,check_hashes(password,hashed_pswd))
 			if result:
-                ########    WRITE CSV AS LOGGED TIMESTAMP ###########
 				#st.success("Logged In as {}".format(username))
-				log = ("{}".format(username))
-				time_print = get_time()
-				#write_data_on_csv(filename="login.csv",listdata=[time_print,name,log]) # to wite csv in local
-				print("Logged In as {}".format(username))
-				gc = gspread.service_account(filename='credentials.json')
-				sh = gc.open("Login_webapp")
-				worksheet = sh.sheet1
-				#print(len(res))
-				listdata=[time_print,name,log]
-				worksheet.append_row(listdata)# no specify the row
-				### retrieve data ###
-				res = worksheet.get_all_records() # list of dictionaries
-				res = worksheet.get_all_values() # list of lists
-				print(res)
-
-
+				
 				pag_name = ["Demo","Demo_iniziale"]
 				
 				OPTIONS = pag_name
