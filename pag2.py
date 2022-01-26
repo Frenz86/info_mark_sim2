@@ -40,7 +40,7 @@ def get_items_ad_triangular(unit_price, unit_cost, N):
 def main():
     # Get the data from url and request it as json file
     st.button("Re-run")
-    st.title("Advertising Analytics")
+    #st.title("Advertising Analytics")
     image = Image.open('./image/Silvi1.jpeg')
     st.image(image,use_column_width=True)
 

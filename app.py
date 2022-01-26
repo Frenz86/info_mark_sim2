@@ -70,7 +70,7 @@ def main():
 	url='https://frenzy86.s3.eu-west-2.amazonaws.com/fav/logo.png'
 	response = requests.get(url)
 	image = Image.open(BytesIO(response.content))
-	st.title("Marketing Investment Simulation")
+	st.title("Marketing Simulator")
 	st.image(image, caption='',use_column_width=True)
 	##############################################################
 	#menu = ["Login","SignUp"] # per creare password
