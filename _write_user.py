@@ -1,9 +1,9 @@
 import streamlit as st
-import investpy
-import pandas as pd
-import plotly.express as px
-import datetime
-from matplotlib import pyplot as plt
+#import investpy
+#import pandas as pd
+#import plotly.express as px
+#import datetime
+#from matplotlib import pyplot as plt
 
 # Security
 #passlib,hashlib,bcrypt,scrypt
